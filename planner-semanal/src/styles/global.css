@@ -6,7 +6,7 @@ body {
   }
   
   .planner-container {
-    max-width: 1100px; /* Aumentei a largura do planner */
+    max-width: 1100px;
     margin: 40px auto;
     background: white;
     padding: 30px;
@@ -14,34 +14,48 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   }
   
+  /* Ajuste do cabeçalho */
   .planner-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    text-align: center;
   }
   
   h1 {
     color: #333;
-    font-size: 28px; /* Aumentei o tamanho do título */
+    font-size: 28px;
     font-weight: bold;
   }
   
+  /* Logo responsivo */
+  .planner-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Campo do mês ajustável */
   .month-input {
     padding: 8px;
     font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    width: 100%;
+    max-width: 250px;
   }
   
-  /* Ajustando o layout do planner para caber melhor */
+  /* Layout do planner para telas maiores */
   .planner-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 15px;
   }
   
-  /* Aumentei o tamanho das colunas */
+  /* Ajustes nas colunas */
   .planner-column {
     display: flex;
     flex-direction: column;
@@ -52,7 +66,7 @@ body {
     text-align: center;
   }
   
-  /* Aumentei o tamanho do cabeçalho de cada dia */
+  /* Estilo dos dias da semana */
   .planner-column h2 {
     text-align: center;
     color: white;
@@ -63,13 +77,13 @@ body {
     border-radius: 8px 8px 0 0;
   }
   
-  /* Aumentei o tamanho da caixa de texto */
+  /* Área de texto ajustável */
   textarea {
     width: 100%;
-    height: 150px; /* Aumentei a altura */
+    height: 150px;
     border: 1px solid #ddd;
     padding: 10px;
-    font-size: 18px; /* Aumentei a fonte */
+    font-size: 18px;
     border-radius: 8px;
     resize: none;
   }
@@ -81,10 +95,10 @@ body {
   
   .notes-section label {
     font-weight: bold;
-    font-size: 22px; /* Aumentei o tamanho do texto */
+    font-size: 22px;
   }
   
-  /* Aumentei a caixa de anotações */
+  /* Caixa de anotações maior */
   .notes-section textarea {
     width: 100%;
     height: 120px;
@@ -92,10 +106,68 @@ body {
     padding: 10px;
     border-radius: 8px;
   }
-  .planner-logo {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
+  
+  /* 🔹 RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS 🔹 */
+  @media (max-width: 1024px) {
+    .planner-container {
+      max-width: 90%;
+      padding: 20px;
+    }
     
+    .planner-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+    
+    textarea {
+      height: 120px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .planner-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+  
+    .planner-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .month-input {
+      max-width: 100%;
+    }
+    
+    textarea {
+      height: 100px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .planner-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 coluna em celulares */
+    }
+  
+    h1 {
+      font-size: 22px;
+    }
+    
+    .planner-container {
+      padding: 15px;
+    }
+  
+    .planner-column h2 {
+      font-size: 18px;
+    }
+  
+    textarea {
+      height: 80px;
+      font-size: 14px;
+    }
+  }
+  
