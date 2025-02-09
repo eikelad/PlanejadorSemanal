@@ -92,4 +92,10 @@ body {
     padding: 10px;
     border-radius: 8px;
   }
-  
+  .planner-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+    

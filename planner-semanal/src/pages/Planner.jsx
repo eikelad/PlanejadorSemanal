@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/global.css";
+import logo from "../assets/logo.png"; 
 
 const Planner = () => {
   const daysOfWeek = [
@@ -35,17 +36,8 @@ const Planner = () => {
   return (
     <div className="planner-container">
       <div className="planner-header">
-        <h1>PLANEJAMENTO SEMANAL</h1>
-        <label>
-          Período:
-          <input
-            type="text"
-            value={month}
-            onChange={(e) => setMonth(e.target.value)}
-            className="month-input"
-            placeholder="Digite o mês..."
-          />
-        </label>
+      <img src={logo} alt="Planejamento Semanal" className="planner-logo" />
+
       </div>
 
       <div className="planner-grid">
@@ -69,6 +61,13 @@ const Planner = () => {
           placeholder="Escreva suas anotações aqui..."
         />
       </div>
+      <div className="storage-warning">
+  <p>
+    🔔 <strong>Atenção:</strong> Os dados são salvos apenas neste navegador. 
+    Se você limpar o cache ou usar outro dispositivo, as informações serão perdidas.
+  </p>
+</div>
+
     </div>
   );
 };
