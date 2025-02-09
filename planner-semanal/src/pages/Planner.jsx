@@ -37,7 +37,7 @@ const Planner = () => {
       <div className="planner-header">
         <h1>PLANEJAMENTO SEMANAL</h1>
         <label>
-          Mês:
+          Período:
           <input
             type="text"
             value={month}
