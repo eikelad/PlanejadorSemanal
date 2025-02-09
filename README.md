@@ -3,7 +3,7 @@
 
 
 O **Planner Semanal** é um aplicativo web para organização de tarefas semanais. Ele permite adicionar tarefas para cada dia da semana, fazer anotações e acompanhar seu progresso. Todos os dados são **salvos no próprio navegador**.
-(https://github.com/eikelad/PlanejadorSemanal/blob/main/Captura%20de%20tela%202025-02-08%20221750.png)
+
 🚀 **Acesse agora:**  
 🔗 [Planner Semanal - Vercel](https://planner-semanal-mcbyz274g-eikelads-projects.vercel.app)
 
